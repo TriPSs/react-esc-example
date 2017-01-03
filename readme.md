@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/TriPSs/react-esc-example.svg?branch=master)](https://travis-ci.org/TriPSs/react-esc-example?branch=master)
 [![dependencies](https://david-dm.org/TriPSs/react-esc-example.svg)](https://david-dm.org/TriPSs/react-esc-example)
 [![devDependency Status](https://david-dm.org/TriPSs/react-esc-example/dev-status.svg)](https://david-dm.org/TriPSs/react-esc-example#info=devDependencies)
+[![codecov](https://codecov.io/gh/TriPSs/react-esc-example/branch/master/graph/badge.svg)](https://codecov.io/gh/TriPSs/react-esc-example)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 ## This project is based on [universal-react-redux-starter-kit](https://github.com/janoist1/universal-react-redux-starter-kit)
