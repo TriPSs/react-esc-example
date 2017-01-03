@@ -8,13 +8,13 @@ branches:
   - master
   - develop
 
-cache:
-  directories:
-    - node_modules
-
 install:
   - npm install
 
+cache:
+  directories:
+    - node_modules
+    
 script:
   - npm run test
   - npm run deploy:dev
