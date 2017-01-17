@@ -8,8 +8,9 @@ import defaultLayout from './layout'
 import reducers from '../src/store/reducers'
 import AppContainer from '../src/containers/AppContainer'
 
-const localip = ip.address()
-const debug   = _debug('app:config')
+const localip  = ip.address()
+const debug    = _debug('app:config')
+const NODE_ENV = process.env.NODE_ENV || 'development'
 debug('Creating configuration.')
 
 // ========================================================
@@ -17,13 +18,9 @@ debug('Creating configuration.')
 // ========================================================
 const config = {
   hasOwn: {
-    server: true
+    server: false,
+    nginx : false
   },
-
-  // ----------------------------------
-  // Project Structure
-  // ----------------------------------
-  path_base: path.resolve(__dirname, '..'),
 
   // ----------------------------------
   // Server Configuration
@@ -40,7 +37,7 @@ const config = {
 // Utilities
 // ------------------------------------
 const resolve = path.resolve
-const base    = (...args) => Reflect.apply(resolve, null, [config.path_base, ...args])
+const base    = (...args) => Reflect.apply(resolve, null, [path.resolve(__dirname, '..'), ...args])
 
 config.utils_paths = {
   base: base,
@@ -49,10 +46,10 @@ config.utils_paths = {
 // ========================================================
 // Environment Configuration
 // ========================================================
-debug(`Looking for environment overrides for NODE_ENV "${config.env}".`)
+debug(`Looking for environment overrides for NODE_ENV "${NODE_ENV}".`)
 
 const environments = require('./environments').default
-const overrides    = environments[config.env]
+const overrides    = environments[NODE_ENV]
 
 if (overrides) {
   debug('Found overrides, applying to default configuration.')

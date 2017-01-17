@@ -75,7 +75,7 @@
   "license": "MIT",
   "dependencies": {
     "better-npm-run": "0.0.13",
-    "react-esc": "0.0.46"
+    "react-esc": "0.0.65"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
