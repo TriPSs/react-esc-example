@@ -24,6 +24,8 @@ export default {
       chunks: true,
       chunkModules: true,
       colors: true
-    }
+    },
+    use_compiled_server: true,
+    compiler_css_inline: false
   })
 }
