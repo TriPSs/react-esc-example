@@ -1,7 +1,6 @@
 /* eslint key-spacing:0 spaced-comment:0 */
 import path from 'path'
 import _debug from 'debug'
-import { argv } from 'yargs'
 import ip from 'ip'
 
 import defaultLayout from './layout'
@@ -93,6 +92,14 @@ const config = {
   //   {type: 'text-summary'},
   //   {type: 'lcov', dir: 'coverage'}
   // ],
+
+  // ----------------------------------
+  // Middleware Configuration
+  // ----------------------------------
+  // middlewares: {
+  //   byFolder: false,   // When true, esc will get the middlewares from store/middleware/index
+  //   collection: []     // Middlewares put in here will also be added
+  // },
 
   defaultLayout,
   reducers,
