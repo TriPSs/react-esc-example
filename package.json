@@ -75,7 +75,8 @@
   "license": "MIT",
   "dependencies": {
     "better-npm-run": "0.0.13",
-    "react-esc": "0.0.70"
+    "react-esc": "1.1.0",
+    "react-resolver": "https://github.com/TriPSs/react-resolver"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",

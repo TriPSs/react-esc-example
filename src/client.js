@@ -1,6 +1,4 @@
-import defaultLayout from '../config/layout'
 import Client from 'react-esc/client'
-import reducers from './store/reducers'
-import AppContainer from './containers/AppContainer'
+import config from '../config'
 
-Client(AppContainer, defaultLayout, reducers)
+Client(config)
