@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import { Router } from 'react-router'
 import { Provider } from 'react-redux'
 import Helmet from 'react-helmet'
-import * as Storage from 'react-esc/Storage'
+import * as Storage from 'react-esc/storage'
 
 class AppContainer extends React.Component {
 
