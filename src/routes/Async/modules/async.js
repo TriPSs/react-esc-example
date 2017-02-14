@@ -23,7 +23,12 @@ export function fetchedData (data) {
 }
 
 export const fetchData = () => {
-  return (dispatch) => {
+  return (dispatch, getState) => {
+
+    if (getState().async && getState().async.fetchedData) {
+      return Promise.resolve(dispatch(fetchedData(getState().async.fetchedData)))
+    }
+
     dispatch(startFetching())
 
     return fetch('https://jsonplaceholder.typicode.com/posts/1')
@@ -31,6 +36,7 @@ export const fetchData = () => {
       .then(data => {
         return dispatch(fetchedData(data))
       })
+
   }
 }
 
