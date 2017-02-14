@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react'
 import { Router } from 'react-router'
 import { Provider } from 'react-redux'
 import Helmet from 'react-helmet'
+import * as Storage from 'react-esc/Storage'
 
 class AppContainer extends React.Component {
 
@@ -15,6 +16,9 @@ class AppContainer extends React.Component {
 
   render() {
     const {layout, history, routes, routerKey, store} = this.props
+
+    // Checks if the Cookie storage is available, if not it will create it
+    Storage.check()
 
     return (
       <Provider store={store}>
