@@ -38,30 +38,37 @@ The application structure presented in this boilerplate is **fractal**, where fu
 
 ```
 .
-├── bin                      # Build/Start scripts
-├── build                    # All build-related configuration
-│   └── karma                # Configuration file for karma
-├── config                   # Project configuration settings
-├── src                      # Application source code
-│   ├── client.js            # Application bootstrap and rendering
-│   ├── components           # Reusable Presentational Components
-│   ├── containers           # Reusable Container Components
-│   ├── layouts              # Components that dictate major page structure
-│   ├── modules              # Modules that deserve a separate file
-│   ├── routes               # Main route definitions and async split points
-│   │   ├── index.js         # Bootstrap main application routes with store
-│   │   └── Home             # Fractal route
-│   │       ├── index.js     # Route definitions and async split points
-│   │       ├── assets       # Assets required to render components
-│   │       ├── components   # Presentational React Components
-│   │       ├── container    # Connect components to actions and store
-│   │       ├── modules      # Collections of reducers/constants/actions
-│   │       └── routes **    # Fractal sub-routes (** optional)
-│   ├── static               # Static assets (not imported anywhere in source code)
-│   ├── store                # Redux-specific pieces
-│   │   └── reducers.js      # Reducer registry and injection
-│   └── styles               # Application-wide styles (generally settings)
-└── tests                    # Unit tests
+├── bin                         # Build/Start scripts
+├── build                       # All build-related configuration
+│   └── karma                   # Configuration file for karma
+├── config                      # Project configuration settings
+├── src                         # Application source code
+│   ├── client.js               # Application bootstrap and rendering
+│   ├── components              # Reusable Presentational Components
+│   ├── containers              # Reusable Container Components
+│   ├── layouts                 # Components that dictate major page structure
+│   ├── modules                 # Modules that deserve a separate file
+│   ├── routes                  # Main route definitions and async split points
+│   │   ├── index.js            # Bootstrap main application routes with store
+│   │   └── Home                # Fractal route
+│   │       ├── components      # Route specific components
+│   │           └── index.js    # Exports all the route specific components
+│   │       ├── index.js        # Route definitions and async split points
+│   │       ├── assets          # Assets required to render components
+│   │       ├── HomeActions     # Collections of actions
+│   │       ├── HomeComponent   # Presentational React Components
+│   │       ├── HomeConstants   # Collections of constants
+│   │       ├── HomeContainer   # Connect components to actions and store
+│   │       ├── HomeReducer     # Components reducer
+│   │       ├── HomeSelectors   # Collections of selectors
+│   │       └── routes **       # Fractal sub-routes (** optional)
+│   ├── static                  # Static assets (not imported anywhere in source code)
+│   ├── store                   # Redux-specific pieces
+│   │   └── middleware          # All the projects middlewares
+│   │       └── index.js        # Containg a function exporting a array of the middleware collection
+│   │   └── reducers.js         # Reducer registry and injection
+│   └── styles                  # Application-wide styles (generally settings)
+└── tests                       # Unit tests
 ```
 
 ### Routing
@@ -106,4 +113,4 @@ Both `.scss` and `.css` file extensions are supported out of the box and are con
 
 ### Server
 
-This starter kit comes with React-ESC (Easy to use Client and Server) who handles the complete server side and client rendering so you can focus on what you love.
+This starter kit comes with [React-ESC](https://github.com/TriPSs/react-esc) (Easy to use Client and Server) who handles the complete server side and client rendering so you can focus on what you love.

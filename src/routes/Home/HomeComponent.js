@@ -1,9 +1,9 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import DuckImage from '../assets/Duck.jpg'
-import classes from './HomeView.scss'
+import DuckImage from 'styles/assets/Duck.jpg'
+import classes from './Home.scss'
 
-export const HomeView = () => (
+export const Home = () => (
   <div>
     <Helmet title='Wat' />
     <h4>Welcome!</h4>
@@ -14,4 +14,4 @@ export const HomeView = () => (
   </div>
 )
 
-export default HomeView
+export default Home

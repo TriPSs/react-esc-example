@@ -2,27 +2,27 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { resolve } from 'react-esc/resolver'
 
-@resolve('fetchedData', (props) => props.fetchData().then(action => action.payload))
+@resolve('jsonPlaceholder', (props) => props.fetchData().then(action => action.payload))
 export class Async extends React.Component {
+
+  static propTypes = {
+    fetchData: React.PropTypes.func.isRequired
+  }
+
   render() {
-    const { fetchedData, children } = this.props
+    const { jsonPlaceholder } = this.props
 
     return (
       <div>
         <Helmet title='Async' />
 
         <div>
-          { JSON.stringify(fetchedData) }
+          { JSON.stringify(jsonPlaceholder) }
         </div>
 
-        {children}
       </div>
     )
   }
-}
-
-Async.propTypes = {
-  fetchData: React.PropTypes.func.isRequired
 }
 
 export default Async

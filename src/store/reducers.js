@@ -1,11 +1,14 @@
 import { combineReducers } from 'redux'
 import { routerReducer as router } from 'react-router-redux'
 
+import { REDUCER_NAME as Counter, INITIAL_STATE as CounterState } from '../routes/Counter/CounterConstants'
+import { REDUCER_NAME as Async, INITIAL_STATE as AsyncState } from '../routes/Async/AsyncConstants'
+
 // Fix: "React-Redux: Combining reducers: Unexpected Keys"
 // http://stackoverflow.com/a/33678198/789076
 const initialReducers = {
-  counter: (state = 0) => state, // default value should be imported from the module/reducer
-  async: (state = {}) => state // default value should be imported from the module/reducer
+  [Counter]: (state = CounterState) => state, // default value should be imported from the module/reducer
+  [Async]  : (state = AsyncState) => state // default value should be imported from the module/reducer
 }
 
 export const makeRootReducer = (asyncReducers) => {
