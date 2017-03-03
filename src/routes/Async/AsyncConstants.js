@@ -5,5 +5,5 @@ export const INITIAL_STATE = {
   fetching   : false
 }
 
-export const FETCHED_DATA  = `${REDUCER_NAME}_FETCHED_DATA`
-export const FETCHING_DATA = `${REDUCER_NAME}_FETCHING_DATA`
+export const FETCHED_DATA  = `${REDUCER_NAME}.fetched_data`
+export const FETCHING_DATA = `${REDUCER_NAME}.fetching_data`
