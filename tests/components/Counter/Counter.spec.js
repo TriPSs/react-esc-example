@@ -7,12 +7,12 @@ describe('(Component) Counter', () => {
   let _props, _spies, _wrapper
 
   beforeEach(() => {
-    _spies = {}
-    _props = {
-      counter: 5,
+    _spies   = {}
+    _props   = {
+      count: 5,
       ...bindActionCreators({
         doubleAsync: (_spies.doubleAsync = sinon.spy()),
-        increment: (_spies.increment = sinon.spy())
+        increment  : (_spies.increment = sinon.spy())
       }, _spies.dispatch = sinon.spy())
     }
     _wrapper = shallow(<Counter {..._props} />)
@@ -28,7 +28,7 @@ describe('(Component) Counter', () => {
 
   it('Should render props.counter at the end of the sample counter <h2>.', () => {
     expect(_wrapper.find('h2').text()).to.match(/5$/)
-    _wrapper.setProps({ counter: 8 })
+    _wrapper.setProps({ count: 8 })
     expect(_wrapper.find('h2').text()).to.match(/8$/)
   })
 

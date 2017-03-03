@@ -16,7 +16,7 @@ export function increment(value = 1) {
  you'd probably want to dispatch an action of COUNTER_DOUBLE and let the
  reducer take care of this logic.  */
 
-export const doubleAsync = () => {
+export function doubleAsync() {
   return (dispatch, getState) => {
     return new Promise((resolve) => {
       setTimeout(() => {

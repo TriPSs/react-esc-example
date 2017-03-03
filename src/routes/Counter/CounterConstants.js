@@ -4,4 +4,4 @@ export const INITIAL_STATE = {
   count: 0
 }
 
-export const INCREMENT = `${REDUCER_NAME}_INCREMENT`
+export const INCREMENT = `${REDUCER_NAME}.increment`
