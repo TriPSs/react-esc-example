@@ -6,7 +6,7 @@ import { REDUCER_NAME as Async, INITIAL_STATE as AsyncState } from '../routes/As
 
 // Fix: "React-Redux: Combining reducers: Unexpected Keys"
 // http://stackoverflow.com/a/33678198/789076
-const initialReducers = {
+export const initialReducers = {
   [Counter]: (state = CounterState) => state, // default value should be imported from the module/reducer
   [Async]  : (state = AsyncState) => state // default value should be imported from the module/reducer
 }
