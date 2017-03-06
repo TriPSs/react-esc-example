@@ -12,10 +12,13 @@ chai.use(sinonChai)
 chai.use(chaiAsPromised)
 chai.use(chaiEnzyme())
 
+require.ensure = (deps, cb) => cb(require);
+
 global.chai = chai
 global.sinon = sinon
 global.expect = chai.expect
 global.should = chai.should()
+global.require = require
 
 // ---------------------------------------
 // Require Tests
