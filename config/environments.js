@@ -2,6 +2,7 @@
 // Supply a key to the default export matching the NODE_ENV that you wish to target, and
 // the base configuration will apply your overrides before exporting itself.
 export default {
+
   // ======================================================
   // Overrides when NODE_ENV === 'development'
   // ======================================================
@@ -16,16 +17,16 @@ export default {
   // Overrides when NODE_ENV === 'production'
   // ======================================================
   production: (config) => ({
-    compiler_public_path: '/',
+    compiler_public_path    : '/',
     compiler_fail_on_warning: false,
-    compiler_hash_type: 'chunkhash',
-    compiler_devtool: null,
-    compiler_stats: {
-      chunks: true,
+    compiler_hash_type      : 'chunkhash',
+    compiler_devtool        : false,
+    compiler_stats          : {
+      chunks      : true,
       chunkModules: true,
-      colors: true
+      colors      : true
     },
-    use_compiled_server: true,
-    compiler_css_inline: false
+    use_compiled_server     : true,
+    compiler_css_inline     : false
   })
 }
