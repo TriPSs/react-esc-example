@@ -3,10 +3,6 @@ import path from 'path'
 import _debug from 'debug'
 import ip from 'ip'
 
-import defaultLayout from './layout'
-import reducers from '../src/store/reducers'
-import AppContainer from '../src/containers/AppContainer'
-
 const localip  = ip.address()
 const debug    = _debug('app:config')
 const NODE_ENV = process.env.NODE_ENV || 'development'
@@ -105,10 +101,6 @@ const config = {
   //     options: {}      // Custom options for redux logger
   //   }
   // },
-
-  defaultLayout,
-  reducers,
-  AppContainer
 }
 
 // ------------------------------------
@@ -118,7 +110,7 @@ const resolve = path.resolve
 const base    = (...args) => Reflect.apply(resolve, null, [path.resolve(__dirname, '..'), ...args])
 
 config.utils_paths = {
-  base: base,
+  base
 }
 
 // ========================================================

@@ -1,19 +1,26 @@
 import React from 'react'
+import { Route, Switch } from 'react-router'
+
 import Header from '../../components/Header'
 import classes from './CoreLayout.scss'
 import '../../styles/core.scss'
 
-export const CoreLayout = ({ children }) => (
+import Home from 'routes/Home'
+import Counter from 'routes/Counter'
+import Async from 'routes/Async'
+
+export const CoreLayout = () => (
   <div className='container text-center'>
     <Header />
+
     <div className={classes.mainContainer}>
-      {children}
+      <Switch>
+        <Route {...Home} />
+        <Route {...Counter} />
+        <Route {...Async} />
+      </Switch>
     </div>
   </div>
 )
-
-CoreLayout.propTypes = {
-  children: React.PropTypes.element.isRequired
-}
 
 export default CoreLayout
