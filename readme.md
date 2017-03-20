@@ -114,3 +114,15 @@ Both `.scss` and `.css` file extensions are supported out of the box and are con
 ### Server
 
 This starter kit comes with [React-ESC](https://github.com/TriPSs/react-esc) (Easy to use Client and Server) who handles the complete server side and client rendering so you can focus on what you love.
+
+### Known possible errors
+#### Dyld: Library not loaded
+Installing on some versions of OSX may raise errors with a [missing libpng dependency](https://github.com/tcoopman/image-webpack-loader/issues/51#issuecomment-273597313): 
+```
+Module build failed: Error: dyld: Library not loaded: /usr/local/opt/libpng/lib/libpng16.16.dylib
+```
+This can be remedied by installing the newest version of libpng with [homebrew](http://brew.sh/):
+
+```sh
+brew install libpng
+```
