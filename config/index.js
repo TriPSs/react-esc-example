@@ -98,6 +98,7 @@ const config = {
   //   collection: [],    // Middlewares put in here will also be added
   //
   //   logger: {          // Redux logger config
+  //     enabled: typeof window !== 'undefined' && NODE_ENV !== 'production',   // To enable it only in browser and development
   //     enabled: false,  // Is redux logger enabled
   //     options: {}      // Custom options for redux logger
   //   }
