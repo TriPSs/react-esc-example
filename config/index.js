@@ -6,6 +6,7 @@ import ip from 'ip'
 const localip  = ip.address()
 const debug    = _debug('app:config')
 const NODE_ENV = process.env.NODE_ENV || 'development'
+
 debug('Creating configuration.')
 
 // ========================================================
