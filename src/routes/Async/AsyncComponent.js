@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { resolve } from 'react-esc/resolver'
+import { resolve } from 'react-esc-resolver'
 
 @resolve('jsonPlaceholder', (props) => props.fetchData().then(action => action.payload))
 export class Async extends React.Component {

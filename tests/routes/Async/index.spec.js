@@ -1,23 +1,19 @@
 import AsyncRoute from 'routes/Async'
 
 describe('(Route) Async', () => {
-  let _route
 
-  beforeEach(() => {
-    _route = AsyncRoute({})
+  it('Should be a object.', () => {
+    expect(AsyncRoute).to.be.a('object')
   })
 
-  it('Should return a route configuration object', () => {
-    expect(_route).to.be.a('object')
+  it('Configuration should contain path `AsyncRoute`', () => {
+    expect(AsyncRoute.path).to.equal('/async')
   })
 
-  it('Configuration should contain path `async`', () => {
-    expect(_route.path).to.equal('async')
-  })
-
-  describe('getComponent', () => {
+  describe('Component', () => {
     it('Should be a function', () => {
-      expect(_route.getComponent).to.be.a('function')
+      expect(AsyncRoute.component).to.be.a('function')
     })
   })
+
 })

@@ -5,7 +5,7 @@ import classes from './Home.scss'
 
 export const Home = () => (
   <div>
-    <Helmet title='Home' />
+    <Helmet title={'Home'} />
     <h4>Welcome!</h4>
     <img
       alt='This is a duck, because Redux!'

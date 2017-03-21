@@ -1,25 +1,12 @@
-import { injectReducer } from 'store/reducers'
-import { REDUCER_NAME } from './CounterConstants'
+import React from 'react'
+import CounterContainer  from './CounterContainer'
 
-export default (store) => ({
-  path: 'counter',
-  /*  Async getComponent is only invoked when route matches   */
-  getComponent (nextState, cb) {
-    /*  Webpack - use 'require.ensure' to create a split point
-        and embed an async module loader (jsonp) when bundling   */
-    require.ensure([], (require) => {
-      /*  Webpack - use require callback to define
-          dependencies for bundling   */
-      const Counter = require('./CounterContainer').default
-      const reducer = require('./CounterReducer').default
+export CounterReducer from './CounterReducer'
+export * as CounterActions from './CounterActions'
+export * as CounterConstants from './CounterConstants'
 
-      /*  Add the reducer to the store on key 'counter'  */
-      injectReducer(store, { key: REDUCER_NAME, reducer })
-
-      /*  Return getComponent   */
-      cb(null, Counter)
-
-    /* Webpack named bundle   */
-    }, 'counter')
-  }
-})
+export default {
+  path     : '/counter',
+  exact    : true,
+  component: CounterContainer
+}

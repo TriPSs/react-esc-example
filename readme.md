@@ -1,12 +1,8 @@
-# Example for React-ESC
+# Example for React-ESC [![Build Status](https://travis-ci.org/TriPSs/react-esc-example.svg?branch=master)](https://travis-ci.org/TriPSs/react-esc-example?branch=master) [![](https://img.shields.io/github/issues-raw/tripss/react-esc-example.svg?style=flat-square)](https://github.com/tripss/react-esc-example/issues) [![](https://img.shields.io/david/tripss/react-esc-example.svg?style=flat-square)](https://david-dm.org/tripss/react-esc-example#info=dependencies) [![devDependencies Status](https://david-dm.org/tripss/react-esc-example/dev-status.svg)](https://david-dm.org/tripss/react-esc-example?type=dev) [![codecov](https://codecov.io/gh/TriPSs/react-esc-example/branch/master/graph/badge.svg)](https://codecov.io/gh/TriPSs/react-esc-example)
 
-[![Build Status](https://travis-ci.org/TriPSs/react-esc-example.svg?branch=master)](https://travis-ci.org/TriPSs/react-esc-example?branch=master)
-[![dependencies](https://david-dm.org/TriPSs/react-esc-example.svg)](https://david-dm.org/TriPSs/react-esc-example)
-[![devDependency Status](https://david-dm.org/TriPSs/react-esc-example/dev-status.svg)](https://david-dm.org/TriPSs/react-esc-example#info=devDependencies)
-[![codecov](https://codecov.io/gh/TriPSs/react-esc-example/branch/master/graph/badge.svg)](https://codecov.io/gh/TriPSs/react-esc-example)
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+> Example repo for React-ESC
 
-## This project is based on [universal-react-redux-starter-kit](https://github.com/janoist1/universal-react-redux-starter-kit)
+###### This project is based on [universal-react-redux-starter-kit](https://github.com/janoist1/universal-react-redux-starter-kit)
 
 ### Install dependencies, and check to see it works
 
@@ -126,3 +122,34 @@ This can be remedied by installing the newest version of libpng with [homebrew](
 ```sh
 brew install libpng
 ```
+
+## [License](https://github.com/tripss/react-esc/blob/master/LICENSE)
+
+> Internet Systems Consortium license
+> ===================================
+>
+> The MIT License (MIT)
+>  
+> Copyright (c) 2015 David Zukowski
+>  
+> Permission is hereby granted, free of charge, to any person obtaining a copy
+> of this software and associated documentation files (the "Software"), to deal
+> in the Software without restriction, including without limitation the rights
+> to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+> copies of the Software, and to permit persons to whom the Software is
+> furnished to do so, subject to the following conditions:
+>  
+> The above copyright notice and this permission notice shall be included in all
+> copies or substantial portions of the Software.
+>  
+> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+> IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+> FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+> AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+> LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+> OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+> SOFTWARE.
+
+## Collaboration
+
+If you have questions or issues, please [open an issue](https://github.com/TriPSs/react-esc/issues)!

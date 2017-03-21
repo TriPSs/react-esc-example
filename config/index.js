@@ -3,13 +3,10 @@ import path from 'path'
 import _debug from 'debug'
 import ip from 'ip'
 
-import defaultLayout from './layout'
-import reducers from '../src/store/reducers'
-import AppContainer from '../src/containers/AppContainer'
-
 const localip  = ip.address()
 const debug    = _debug('app:config')
 const NODE_ENV = process.env.NODE_ENV || 'development'
+
 debug('Creating configuration.')
 
 // ========================================================
@@ -101,14 +98,11 @@ const config = {
   //   collection: [],    // Middlewares put in here will also be added
   //
   //   logger: {          // Redux logger config
+  //     enabled: typeof window !== 'undefined' && NODE_ENV !== 'production',   // To enable it only in browser and development
   //     enabled: false,  // Is redux logger enabled
   //     options: {}      // Custom options for redux logger
   //   }
   // },
-
-  defaultLayout,
-  reducers,
-  AppContainer
 }
 
 // ------------------------------------
@@ -118,7 +112,7 @@ const resolve = path.resolve
 const base    = (...args) => Reflect.apply(resolve, null, [path.resolve(__dirname, '..'), ...args])
 
 config.utils_paths = {
-  base: base,
+  base
 }
 
 // ========================================================
