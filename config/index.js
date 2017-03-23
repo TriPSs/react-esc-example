@@ -7,6 +7,8 @@ const localip  = ip.address()
 const debug    = _debug('app:config')
 const NODE_ENV = process.env.NODE_ENV || 'development'
 
+// import responseTime from './middleware/responseTime'
+
 debug('Creating configuration.')
 
 // ========================================================
@@ -88,6 +90,13 @@ const config = {
   // coverage_reporters: [
   //   {type: 'text-summary'},
   //   {type: 'lcov', dir: 'coverage'}
+  // ],
+
+  // ----------------------------------
+  // Server Middleware Configuration
+  // ----------------------------------
+  // server_middlewares: [
+  //    responseTime
   // ],
 
   // ----------------------------------
