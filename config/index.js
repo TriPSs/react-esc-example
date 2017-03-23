@@ -8,6 +8,7 @@ const debug    = _debug('app:config')
 const NODE_ENV = process.env.NODE_ENV || 'development'
 
 // import responseTime from './middleware/responseTime'
+// import responseTimeV2 from './middleware/responseTimeV2'
 
 debug('Creating configuration.')
 
@@ -96,7 +97,8 @@ const config = {
   // Server Middleware Configuration
   // ----------------------------------
   // server_middlewares: [
-  //    responseTime
+  //    responseTime(),
+  //    responseTimeV2
   // ],
 
   // ----------------------------------

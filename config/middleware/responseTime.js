@@ -1,4 +1,4 @@
-export default function responseTime() {
+export default function () {
   return async(ctx, next) => {
     const start = new Date()
 
