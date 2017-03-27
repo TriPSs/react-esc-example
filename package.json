@@ -16,7 +16,8 @@
     "start:dev": "better-npm-run start:dev",
     "start:prod": "better-npm-run start:prod",
     "test": "better-npm-run test",
-    "test:dev": "npm run test -- --watch"
+    "test:dev": "npm run test -- --watch",
+    "eject": "babel-node node_modules/react-esc/eject.js"
   },
   "dependencies": {
     "better-npm-run": "0.0.14",
