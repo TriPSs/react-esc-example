@@ -11,11 +11,11 @@ branches:
 install:
   - npm install
 
-cache:
-  directories:
-    - node_modules
-
 script:
+  - npm run test
+  - npm run deploy:dev
+  - npm run deploy:prod
+  - npm run eject
   - npm run test
   - npm run deploy:dev
   - npm run deploy:prod
