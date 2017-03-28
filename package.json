@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "better-npm-run": "0.0.14",
-    "react-esc": "^2.0.0",
+    "react-esc": "^2.2.0",
     "react-esc-resolver": "^1.0.0"
   },
   "devDependencies": {
