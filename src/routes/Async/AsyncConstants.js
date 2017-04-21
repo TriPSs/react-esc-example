@@ -2,7 +2,7 @@ export const REDUCER_NAME = 'async'
 
 export const INITIAL_STATE = {
   jsonPlaceholder: null,
-  fetching   : false
+  fetching   : false,
 }
 
 export const FETCHED_DATA  = `${REDUCER_NAME}.fetched_data`

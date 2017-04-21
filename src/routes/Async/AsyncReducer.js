@@ -5,17 +5,17 @@ export default (state = Constants.INITIAL_STATE, action) => {
     case Constants.FETCHING_DATA:
       return {
         ...state,
-        fetching: true
+        fetching: true,
       }
 
     case Constants.FETCHED_DATA:
       return {
         ...state,
         fetching       : false,
-        jsonPlaceholder: action.payload
+        jsonPlaceholder: action.payload,
       }
 
     default:
-      return state;
+      return state
   }
 }

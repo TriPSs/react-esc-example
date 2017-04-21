@@ -1,27 +1,22 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import getRoutes from '../routes'
 
-class AppContainer extends React.Component {
+export const AppContainer = ({ layout }) => (
+  <div style={{ height: '100%' }}>
+    <Helmet {...layout} />
 
-  static propTypes = {
-    layout: PropTypes.object.isRequired,
-    store : PropTypes.object.isRequired
-  }
+    {getRoutes()}
 
-  render() {
-    const { layout } = this.props
+  </div>
+)
 
-    return (
-      <div style={{ height: '100%' }}>
-        <Helmet {...layout} />
-
-        {getRoutes()}
-
-      </div>
-    )
-  }
+AppContainer.propTypes = {
+  layout: PropTypes.object.isRequired,
+  store : PropTypes.object.isRequired,
 }
+
 
 export default AppContainer

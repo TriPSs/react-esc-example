@@ -7,15 +7,13 @@ import { AsyncConstants, AsyncReducer } from '../routes/Async'
 // http://stackoverflow.com/a/33678198/789076
 export const initialReducers = {
   [CounterConstants.REDUCER_NAME]: CounterReducer,
-  [AsyncConstants.REDUCER_NAME]  : AsyncReducer
+  [AsyncConstants.REDUCER_NAME]  : AsyncReducer,
 }
 
-export const makeRootReducer = (asyncReducers) => {
-  return combineReducers({
+export const makeRootReducer = asyncReducers => combineReducers({
     // Add sync reducers here
-    ...initialReducers,
-    ...asyncReducers
-  })
-}
+  ...initialReducers,
+  ...asyncReducers,
+})
 
 export default makeRootReducer

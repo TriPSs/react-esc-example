@@ -8,7 +8,7 @@ export const Home = () => (
     <Helmet title={'Home'} />
     <h4>Welcome!</h4>
     <img
-      alt='This is a duck, because Redux!'
+      alt="This is a duck, because Redux!"
       className={classes.duck}
       src={DuckImage} />
   </div>

@@ -5,10 +5,10 @@ export default (state = Constants.INITIAL_STATE, action) => {
     case Constants.INCREMENT:
       return {
         ...state,
-        count: state.count + action.payload
+        count: state.count + action.payload,
       }
 
     default:
-      return state;
+      return state
   }
 }

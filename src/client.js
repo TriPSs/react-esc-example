@@ -1,4 +1,4 @@
-import Client from 'react-esc/client'
+import client from 'react-esc/client'
 import config from '../config'
 
-Client(config)
+client(config)

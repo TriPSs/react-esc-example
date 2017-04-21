@@ -9,8 +9,8 @@ import * as Selectors from './AsyncSelectors'
 
 import Async from './AsyncComponent'
 
-const mapStateToProps = (state) => ({
-  jsonPlaceholder: Selectors.getJsonPlaceholder(state)
+const mapStateToProps = state => ({
+  jsonPlaceholder: Selectors.getJsonPlaceholder(state),
 })
 
 /*  Note: mapStateToProps is where you should use `reselect` to create selectors

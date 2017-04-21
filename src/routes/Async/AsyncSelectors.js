@@ -3,5 +3,5 @@
  */
 import * as Constants from './AsyncConstants'
 
-export const getJsonPlaceholder = (state) => state[Constants.REDUCER_NAME].jsonPlaceholder
-export const getFetching        = (state) => state[Constants.REDUCER_NAME].fetching
+export const getJsonPlaceholder = state => state[Constants.REDUCER_NAME].jsonPlaceholder
+export const getFetching        = state => state[Constants.REDUCER_NAME].fetching

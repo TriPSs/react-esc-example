@@ -1,4 +1,7 @@
 import { connect } from 'react-redux'
+
+import Counter from 'components/Counter'
+
 import * as Actions from './CounterActions'
 import * as Selectors from './CounterSelectors'
 
@@ -7,10 +10,8 @@ import * as Selectors from './CounterSelectors'
     wiring in the actions and state necessary to render a presentational
     component - in this case, the counter:   */
 
-import Counter from 'components/Counter'
-
-const mapStateToProps = (state) => ({
-  count: Selectors.getCount(state)
+const mapStateToProps = state => ({
+  count: Selectors.getCount(state),
 })
 
 /*  Note: mapStateToProps is where you should use `reselect` to create selectors

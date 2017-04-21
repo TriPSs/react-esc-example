@@ -8,5 +8,5 @@ export * as CounterConstants from './CounterConstants'
 export default {
   path     : '/counter',
   exact    : true,
-  component: CounterContainer
+  component: CounterContainer,
 }

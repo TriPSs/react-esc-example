@@ -3,4 +3,4 @@
  */
 import * as Constants from './CounterConstants'
 
-export const getCount = (state) => state[Constants.REDUCER_NAME].count
+export const getCount = state => state[Constants.REDUCER_NAME].count

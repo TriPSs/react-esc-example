@@ -3,14 +3,14 @@ import * as Constants from './AsyncConstants'
 
 export function startFetching() {
   return {
-    type: Constants.FETCHING_DATA
+    type: Constants.FETCHING_DATA,
   }
 }
 
 export function fetchedData(data) {
   return {
     type   : Constants.FETCHED_DATA,
-    payload: data
+    payload: data,
   }
 }
 
@@ -20,8 +20,6 @@ export function fetchData() {
 
     return fetch('https://jsonplaceholder.typicode.com/posts/1')
       .then(response => response.json())
-      .then(data => {
-        return dispatch(fetchedData(data))
-      })
+      .then(data => dispatch(fetchedData(data)))
   }
 }

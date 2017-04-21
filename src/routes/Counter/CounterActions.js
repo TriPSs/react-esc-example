@@ -4,7 +4,7 @@ import * as Selectors from './CounterSelectors'
 export function increment(value = 1) {
   return {
     type   : Constants.INCREMENT,
-    payload: value
+    payload: value,
   }
 }
 
@@ -17,14 +17,12 @@ export function increment(value = 1) {
  reducer take care of this logic.  */
 
 export function doubleAsync() {
-  return (dispatch, getState) => {
-    return new Promise((resolve) => {
-      setTimeout(() => {
+  return (dispatch, getState) => new Promise((resolve) => {
+    setTimeout(() => {
 
-        dispatch(increment(Selectors.getCount(getState())))
+      dispatch(increment(Selectors.getCount(getState())))
 
-        resolve()
-      }, 200)
-    })
-  }
+      resolve()
+    }, 200)
+  })
 }
