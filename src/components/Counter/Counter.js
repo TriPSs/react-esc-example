@@ -6,7 +6,7 @@ import classes from './Counter.scss'
 export const Counter = props => (
   <div>
     <Helmet title="Counter" />
-    <h2 className={classes.counterContainer}>
+    <h2 className={classes.counter__container}>
       Counter:
       {' '}
       <span className={classes['counter--green']}>

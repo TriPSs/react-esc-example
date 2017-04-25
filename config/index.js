@@ -63,7 +63,6 @@ const config = {
   // ----------------------------------
   // Compiler Configuration
   // ----------------------------------
-  // compiler_css_modules    : true,
   // compiler_css_inline     : true,
   // compiler_devtool        : 'source-map',
   // compiler_hash_type      : 'hash',
