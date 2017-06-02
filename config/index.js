@@ -101,6 +101,13 @@ const config = {
   // ],
 
   // ----------------------------------
+  // Option for the user to add custom GLOBALS
+  // ----------------------------------
+  // custom_globals: {
+  //     __API__: '"http://example.com/v1"'
+  // }
+
+  // ----------------------------------
   // Middleware Configuration
   // ----------------------------------
   // middlewares: {
