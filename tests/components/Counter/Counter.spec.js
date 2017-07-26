@@ -9,7 +9,8 @@ describe('(Component) Counter', () => {
   beforeEach(() => {
     _spies   = {}
     _props   = {
-      count: 5,
+      count  : 5,
+      classes: {},
       ...bindActionCreators({
         doubleAsync: (_spies.doubleAsync = sinon.spy()),
         increment  : (_spies.increment = sinon.spy())
