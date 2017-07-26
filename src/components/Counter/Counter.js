@@ -1,23 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import classes from './Counter.scss'
+import injectSheet from 'react-jss'
+import CounterStyles from './CounterStyles'
 
-export const Counter = props => (
+export const Counter = ({ count, increment, doubleAsync, classes }) => (
   <div>
     <Helmet title="Counter" />
-    <h2 className={classes.counter__container}>
+    <h2 className={classes.root}>
       Counter:
       {' '}
-      <span className={classes['counter--green']}>
-        {props.count}
+      <span className={classes.count}>
+        {count}
       </span>
     </h2>
-    <button className="btn btn-default" onClick={() => props.increment()}>
+    <button className="btn btn-default" onClick={() => increment(1)}>
       Increment
     </button>
     {' '}
-    <button className="btn btn-default" onClick={() => props.doubleAsync()}>
+    <button className="btn btn-default" onClick={doubleAsync}>
       Double (Async)
     </button>
   </div>
@@ -29,4 +30,4 @@ Counter.propTypes = {
   increment  : PropTypes.func.isRequired,
 }
 
-export default Counter
+export default injectSheet(CounterStyles)(Counter)

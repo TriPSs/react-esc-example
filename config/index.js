@@ -63,6 +63,7 @@ const config = {
   // ----------------------------------
   // Compiler Configuration
   // ----------------------------------
+  compiler_render: 'jss', // || 'normal
   // compiler_css_inline     : true,
   // compiler_devtool        : 'source-map',
   // compiler_hash_type      : 'hash',
@@ -83,6 +84,13 @@ const config = {
   //   'react-router-redux',
   //   'redux'
   // ],
+
+  // ----------------------------------
+  // JSS
+  // ----------------------------------
+  // jss: {
+  //   options: {},
+  // },
 
   // ----------------------------------
   // Test Configuration
