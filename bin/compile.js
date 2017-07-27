@@ -1,6 +1,6 @@
 import config from '../config'
-import Compiler from 'react-esc/bin/compile'
+import compile from 'react-esc/bin/compile'
 
-;(async function () {
-    await new Compiler.compile(config)
+(async function () {
+  await compile(config)
 })()
