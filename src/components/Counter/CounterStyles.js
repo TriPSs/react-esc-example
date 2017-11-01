@@ -1,13 +1,13 @@
-export const styles = theme => ({
-  root     : {
+export default theme => ({
+  root: {
     fontWeight: 'bold',
   },
-  count: {
-    color: theme.colorPrimary
-  },
-  container: {
-    margin: '1em auto'
-  }
-})
 
-export default styles
+  count: {
+    color: theme.colorPrimary,
+  },
+
+  container: {
+    margin: '1em auto',
+  },
+})

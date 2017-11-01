@@ -6,7 +6,7 @@ import Helmet from 'react-helmet'
 import getRoutes from '../routes'
 
 const theme = {
-  colorPrimary: 'rgb(25, 200, 25)'
+  colorPrimary: 'rgb(25, 200, 25)',
 }
 
 export const AppContainer = ({ layout }) => (
