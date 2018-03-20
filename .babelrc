@@ -1,8 +1,24 @@
 {
-  "presets": ["es2015", "react", "stage-0"],
+  "presets": [
+    "es2015",
+    "react",
+    "stage-0"
+  ],
   "plugins": [
     "transform-runtime",
-    "transform-decorators-legacy",
-    "add-react-displayname"
-  ]
+    "add-react-displayname",
+    "transform-decorators-legacy"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "react-hot-loader/babel"
+      ]
+    },
+    "production": {
+      "presets": [
+        "react-optimize"
+      ]
+    }
+  }
 }
